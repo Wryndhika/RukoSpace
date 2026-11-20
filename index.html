@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RukoSpace - Sistem Sewa Ruko</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="loginPage" class="login-wrap">
+    <div class="login-card">
+      <div class="brand-mark">R</div>
+      <h1>RukoSpace</h1>
+      <p class="muted">Sistem Informasi Penyewaan Ruko</p>
+      <form id="loginForm">
+        <label>Username</label>
+        <input id="username" required placeholder="Masukkan username">
+        <label>Password</label>
+        <input id="password" type="password" required placeholder="Masukkan password">
+        <button class="btn primary full" type="submit">Masuk</button>
+      </form>
+      <div class="demo-account">
+        <b>Akun demo</b><br>
+        Admin: <code>admin</code> / <code>admin123</code><br>
+        Penyewa: <code>penyewa</code> / <code>user123</code><br>Pemilik Toko: <code>pemilik</code> / <code>owner123</code>
+      </div>
+      <p id="loginError" class="error"></p>
+    </div>
+  </div>
+
+  <div id="app" class="app hidden">
+    <aside class="sidebar">
+      <div class="side-brand"><span class="brand-mark small">R</span><span>RukoSpace</span></div>
+      <div class="user-box"><div class="avatar" id="avatar">A</div><div><b id="userName">Admin</b><small id="userRole">Pengelola</small></div></div>
+      <nav id="navigation"></nav>
+      <button id="logoutBtn" class="logout">↪ Keluar</button>
+    </aside>
+    <main class="main">
+      <header class="topbar"><div><span class="eyebrow">SISTEM PENYEWAAN RUKO</span><h2 id="pageTitle">Dashboard</h2></div><div class="top-date" id="today"></div></header>
+      <section id="content"></section>
+      <footer>© 2026 RukoSpace · Sistem Informasi Jasa Sewa Ruko</footer>
+    </main>
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
